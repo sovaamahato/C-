@@ -1,0 +1,30 @@
+//wap a program to find sum of first and last element of an array of size N of type int  and float.2018
+#include <iostream>
+using namespace std;
+template <typename T>
+ T sum( T num)
+ {
+  	int a[30];
+ 	int i=0;
+ 	T sum=0;
+ 	 cout<<"enter elements ";
+ 	 
+ 	 for(i=0;i<num;i++)
+ 	 {
+ 	 	cin>>a[i];
+	 }
+
+ 	 
+ 	sum=a[0]+a[num-1];
+ 	 	
+
+	 cout<<"sum of first and last elements of the given array ="<<sum;
+ }
+ 
+ int main()
+ {
+ 	int n;
+    cout<<"Enter how many number you will insert in array"<<endl;
+    cin>>n;
+    sum<int>(n);
+ }

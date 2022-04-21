@@ -1,0 +1,37 @@
+//program to find simple interest by passing object in a function returning object as well
+
+#include<iostream>
+using namespace std;
+
+class A
+{
+	int p;
+	int T;
+	public:
+		static float rate;
+		double Si;
+		
+	void input ()
+	{
+		cout<<"Enter the priciple";
+		cin>>p;
+		cout<<"Enter the Time";
+		cin>>T;
+		}
+	A Interest(A)
+	{
+		A obj;
+		obj.Si=(p*T*rate)/100;
+		return obj;
+	}			
+};
+
+float A::rate=0.5;
+int main()
+{
+	A obj1,obj2;
+	obj1.input();
+	obj2.Interest(obj1);
+	cout<<"The simple interest is"< <obj2.Si;
+	return 0;
+}
